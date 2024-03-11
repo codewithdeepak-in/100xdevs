@@ -1,10 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require("fs");
-
 const app = express();
-
 app.use(bodyParser.json());
+// Middleware to parse the request body.
 
 function findIndex(arr, id) {
   for (let i = 0; i < arr.length; i++) {
@@ -81,7 +80,6 @@ app.put('/todos/:id', function(req, res) {
 });
 
 app.delete('/todos/:id', function(req, res) {
-
   fs.readFile("todos.json", "utf8", (err, data) => {
     if (err) throw err;
     let todos = JSON.parse(data);
@@ -103,4 +101,10 @@ app.use((req, res, next) => {
   res.status(404).send();
 });
 
-module.exports = app;
+// module.exports = app;
+
+const port = 3000;
+
+app.listen(port, function(){
+  console.log("Server running on port " + port);
+})

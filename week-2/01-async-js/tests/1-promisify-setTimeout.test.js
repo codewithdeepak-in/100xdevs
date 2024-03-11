@@ -1,4 +1,4 @@
-const wait = require("../hard (promises)/1-promisify-setTimeout");
+const wait = require("../hard/1-promisify-setTimeout");
 
 describe("wait function", () => {
   test("resolves after 1 second", () => {
@@ -8,7 +8,8 @@ describe("wait function", () => {
       .then(() => {
         const end = Date.now();
         const difference = end - start;
-        expect(difference).toBeGreaterThanOrEqual(1000); // Expect difference to be at least 1000 ms (1 second)
+        expect(difference).toBeGreaterThanOrEqual(1000); 
+        // Expect difference to be at least 1000 ms (1 second)
       });
   }, 2000); // Set timeout to 2000 ms (2 seconds)
 
@@ -19,7 +20,8 @@ describe("wait function", () => {
       .then(() => {
         const end = Date.now();
         const difference = end - start;
-        expect(difference).toBeGreaterThanOrEqual(2000); // Expect difference to be at least 2000 ms (2 seconds)
+        expect(difference).toBeGreaterThanOrEqual(2000); 
+        // Expect difference to be at least 2000 ms (2 seconds)
       });
   }, 3000); // Set timeout to 3000 ms (3 seconds)
 
@@ -30,7 +32,8 @@ describe("wait function", () => {
       .then(() => {
         const end = Date.now();
         const difference = end - start;
-        expect(difference).toBeGreaterThanOrEqual(3000); // Expect difference to be at least 3000 ms (3 seconds)
+        expect(difference).toBeGreaterThanOrEqual(3000); 
+        // Expect difference to be at least 3000 ms (3 seconds)
       });
   }, 4000); // Set timeout to 4000 ms (4 seconds)
 });
