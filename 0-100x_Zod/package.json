@@ -1,0 +1,16 @@
+{
+  "name": "0-100x_zod",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Basics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon Basics.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0",
+    "zod": "^3.22.4"
+  }
+}

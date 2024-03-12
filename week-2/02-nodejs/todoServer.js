@@ -33,7 +33,7 @@
   5. DELETE /todos/:id - Delete a todo item by ID
     Description: Deletes a todo item identified by its ID.
     Response: 200 OK if the todo item was found and deleted, or 404 Not Found if not found.
-    Example: DELETE http://localhost:3000/todos/123
+    Example: DELETE http://localhost:3000/todos/123 - Done 👍
 
     - For any other route not defined in the server return 404
 
@@ -103,6 +103,24 @@
           todos[todoIndex].title = req.body.title;
           todos[todoIndex].description = req.body.description;
           res.json(todos[todoIndex]);
+        }
+      }
+    })
+  })
+
+  app.delete('/todos/:id', (req, res) => {
+    fs.readFile('./todos.json', 'utf-8', function(error, data){
+      if(error) res.send('<h1>No Flight Found</h1>');
+      else {
+        const todos = JSON.parse(data);
+        const todoIndex = findIndex(todos, parseInt(req.params.id));
+        if(todoIndex === -1) res.send('<h1>No Flight Found</h1>');
+        else {
+          todos.splice(todoIndex, 1);
+          fs.writeFile('./todos.json', JSON.stringify(todos), (err) => {
+            if(err) throw err;
+            res.json(todos);
+          });
         }
       }
     })
