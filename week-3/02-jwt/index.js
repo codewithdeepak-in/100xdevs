@@ -63,6 +63,7 @@ function verifyJwt(token) {
 function decodeJwt(token) {
     // Your code here
     const decode = jwt.decode(token);
+    console.log(decode);
     if(decode){
         return true;
     }else{

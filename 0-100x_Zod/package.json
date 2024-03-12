@@ -5,7 +5,7 @@
   "main": "Basics.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon Basics.js"
+    "dev": "nodemon 3-primitives.js"
   },
   "author": "",
   "license": "ISC",
