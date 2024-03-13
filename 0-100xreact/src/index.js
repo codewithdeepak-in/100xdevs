@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './app';
 // Create a component that tracks and displays the number of times it has been rendered.
 

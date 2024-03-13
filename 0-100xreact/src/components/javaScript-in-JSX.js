@@ -5,7 +5,7 @@ const JSXScripts = () => {
     const name = "Piyush Kumar";
     const [isBool, setisBool] = useState(false);
 
-    function handleClick(event){
+    function handleClick(){
         setisBool(!isBool);    
     }
 

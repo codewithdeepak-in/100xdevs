@@ -47,8 +47,8 @@ const App = () => {
                 </div>
             </form>
             <div>
-                <ol>
-                    {todos.map((todo, key) => (
+                <ol className="mt-4">
+                    {todos.length === 0 ? <span className="alert alert-danger">No Todo Found</span> : todos.map((todo, key) => (
                         <>
                             <li key={key}>
                                 {editIndex === key ? (
