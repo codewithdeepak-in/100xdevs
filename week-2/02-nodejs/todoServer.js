@@ -53,7 +53,6 @@
     })
   })
 
-
   function findIndex(todos, id){
     for(let i = 0; i < todos.length; i++){
       if(todos[i].id === id) return i;
