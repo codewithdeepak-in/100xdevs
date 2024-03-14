@@ -5,6 +5,10 @@ import JSXScripts from './components/javaScript-in-JSX';
 import {Time, PropsComponent, SmallProject, ImageShowCase} from './components/propDrilling';
 import ConditionalRendering from './components/conditionalRendering';
 import NextQuote from './components/nextState';
+import ContactForm from './components/contactform';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 const App = ()=> {
     return(
@@ -25,8 +29,9 @@ const App = ()=> {
             <ImageShowCase />
             <h3>Conditional Rendering</h3>
             <ConditionalRendering /> */}
-            <NextQuote />
+            {/* <NextQuote /> */}   
 
+            <ContactForm />
         </div>
     )
 }
